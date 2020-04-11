@@ -68,6 +68,6 @@ max = datetime.datetime(1950, 1, 1)
 for time in file:
     log = datetime.datetime.strptime(time[:23], '%Y-%m-%d %H:%M:%S,%f')
     if max < log:
-        log = max
+        max = log
         time_max = time
 print(time_max)
